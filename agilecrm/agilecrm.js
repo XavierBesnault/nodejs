@@ -56,7 +56,6 @@ ContactAPI.prototype.getListContacts = function getListContacts(success, failure
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var contacts = JSON.parse(body);
                     success(contacts);
                 } catch (ex) {
@@ -89,7 +88,7 @@ ContactAPI.prototype.getContactById = function getContactById(contactId, success
             if (success) {
                 if (body) {
                     try {
-						console.log("Status Code = " + resp.statusCode);
+
                         var contacts = JSON.parse(body);
                         success(contacts);
                     } catch (ex) {
@@ -124,7 +123,6 @@ ContactAPI.prototype.getContactByEmail = function getContactByEmail(email, succe
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var contacts = JSON.parse(body);
                     success(contacts);
                 } catch (ex) {
@@ -159,7 +157,6 @@ ContactAPI.prototype.add = function add(contact, success, failure) {
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 200){
                         console.log("Error message = " + body);
@@ -202,7 +199,6 @@ ContactAPI.prototype.update = function update(contact, success, failure) {
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 200){
                         console.log("Error message = " + body);
@@ -245,7 +241,6 @@ ContactAPI.prototype.deleteContact = function deleteContact(contactId, success, 
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var contacts = JSON.parse(body);
                     success(contacts);
                 } catch (ex) {
@@ -282,7 +277,6 @@ ContactAPI.prototype.updateTagsById = function update(contact, success, failure)
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var contacts = JSON.parse(body);
                     success(contacts);
                 } catch (ex) {
@@ -321,7 +315,6 @@ ContactAPI.prototype.deleteTagsById = function update(contact, success, failure)
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var contacts = JSON.parse(body);
                     success(contacts);
                 } catch (ex) {
@@ -360,7 +353,6 @@ ContactAPI.prototype.createDeal = function createDeal(opportunity, success, fail
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var opportunity = JSON.parse(body);
                     success(opportunity);
                 } catch (ex) {
@@ -399,7 +391,6 @@ ContactAPI.prototype.updateDeal = function updateDeal(opportunity, success, fail
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var opportunity = JSON.parse(body);
                     success(opportunity);
                 } catch (ex) {
@@ -436,7 +427,7 @@ ContactAPI.prototype.getDealById = function getDealById(dealId, success, failure
             if (success) {
                 if (body) {
                     try {
-						console.log("Status Code = " + resp.statusCode);
+
                         var opportunity = JSON.parse(body);
                         success(opportunity);
                     } catch (ex) {
@@ -472,7 +463,7 @@ ContactAPI.prototype.getDealByContactId = function getDealByContactId(contactId,
             if (success) {
                 if (body) {
                     try {
-						console.log("Status Code = " + resp.statusCode);
+
                         var opportunity = JSON.parse(body);
                         success(opportunity);
                     } catch (ex) {
@@ -511,7 +502,6 @@ ContactAPI.prototype.deleteDealById = function deleteDealById(dealId, success, f
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log("Status Code = " + resp.statusCode);
                     success(body);
                 } catch (ex) {
                     failure(ex);
@@ -547,7 +537,6 @@ ContactAPI.prototype.createNote = function createNote(note, success, failure) {
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var note = JSON.parse(body);
                     success(note);
                 } catch (ex) {
@@ -586,7 +575,6 @@ ContactAPI.prototype.updateNote = function updateNote(note, success, failure) {
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var note = JSON.parse(body);
                     success(note);
                 } catch (ex) {
@@ -697,7 +685,6 @@ ContactAPI.prototype.createTask = function createTask(task, success, failure) {
         resp.on('end', function() {
             if (success) {
                 try {
-					console.log("Status Code = " + resp.statusCode);
                     var task = JSON.parse(body);
                     success(task);
                 } catch (ex) {
@@ -1060,7 +1047,6 @@ ContactAPI.prototype.getContactCustomField = function getContactCustomField(succ
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log("Status Code = " + resp.statusCode);
                     var customDatas = JSON.parse(body);
                     success(customDatas);
                 } catch (ex) {
@@ -1096,7 +1082,6 @@ ContactAPI.prototype.createCustomField = function createCustomField(customJson, 
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log("Status Code = " + resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 200){
                         console.log("Error message = " + body);
@@ -1139,7 +1124,6 @@ ContactAPI.prototype.updateCustomField = function updateCustomField(customJson, 
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log("Status Code = " + resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 200){
                         console.log("Error message = " + body);
@@ -1182,7 +1166,6 @@ ContactAPI.prototype.createEvent = function createEvent(customJson, success, fai
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log(resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 200){
                         console.log(body)
@@ -1233,7 +1216,6 @@ ContactAPI.prototype.addTagstoContacts = function addTagstoContacts(tags,contact
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log("Status Code = " + resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 204){
                         console.log("Error message = " + body);
@@ -1282,7 +1264,6 @@ ContactAPI.prototype.deleteTagstoContacts = function deleteTagstoContacts(tags,c
         resp.on('end', function() {
             if (success) {
                 try {
-                    console.log("Status Code = " + resp.statusCode);
                     var statusCode = resp.statusCode;
                     if (statusCode != 204){
                         console.log("Error message = " + body);
